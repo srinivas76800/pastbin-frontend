@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'next/navigation'
+import { BackgroundRippleEffect } from '@/components/ui/background-ripple-effect'
 
 export default function CopiedTextPage() {
   const { id } = useParams()
@@ -20,7 +21,7 @@ export default function CopiedTextPage() {
           { sheardurl: id }
         )
         console.log(res.data.data.text)
-        if(!res.data.success){
+        if (!res.data.success) {
           setError(res.data.message)
         }
         setData(res.data)
@@ -35,10 +36,18 @@ export default function CopiedTextPage() {
 
   if (loading) return <p className="min-h-screen flex items-center justify-center">Loading...</p>
   if (error) return <p className="min-h-screen flex items-center justify-center">{error}</p>
-
   return (
-    <div className="min-h-screen text-white flex items-center justify-center">
-      <p className="text-xl">{data.data.text}</p>
+    <div className="min-h-screen text-white flex flex-col ">
+      {/* //   <p className="text-xl"></p> */}
+      <div className="text-white relative flex h-screen w-full flex-col items-start justify-start overflow-hidden">
+        <BackgroundRippleEffect />
+        <div className="mt-60 w-full">
+          <h2 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl">
+            Instant Text Sharing. Zero Friction.
+          </h2>
+        </div>
+      </div>
+      <p className="relative z-10 mx-auto mt-1 max-w-xl text-center">{data.data.text}</p>
     </div>
   )
 }
