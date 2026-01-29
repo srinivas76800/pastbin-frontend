@@ -34,8 +34,8 @@ export default function CopiedTextPage() {
     fetchText()
   }, [id])
 
-  if (loading) return <p className="min-h-screen flex items-center justify-center">Loading...</p>
-  if (error) return <p className="min-h-screen flex items-center justify-center">{error}</p>
+  if (loading) return <p className="min-h-screen text-white flex items-center justify-center">Loading...</p>
+  if (error) return <p className="min-h-screen text-white flex items-center justify-center">{error}</p>
   return (
     <div className="min-h-screen text-white flex flex-col">
       {/* //   <p className="text-xl"></p> */}
