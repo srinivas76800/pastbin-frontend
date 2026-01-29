@@ -37,7 +37,7 @@ export default function CopiedTextPage() {
   if (error) return <p className="min-h-screen flex items-center justify-center">{error}</p>
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen text-white flex items-center justify-center">
       <p className="text-xl">{data.data.text}</p>
     </div>
   )
