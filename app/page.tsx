@@ -44,7 +44,7 @@ export default function Home() {
         href={`/${data}`}
         className="cursor-pointer text-blue-600 underline"
       >
-        {data}
+        {data?(`https://pastbin-frontend.vercel.app/${data}`):('')} 
       </Link>
 
     </form>
