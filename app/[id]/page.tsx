@@ -16,7 +16,7 @@ export default function CopiedTextPage() {
     const fetchText = async () => {
       try {
         const res = await axios.post(
-          'https://pastbin-backend-production.up.railway.app',
+          'https://pastbin-backend-production.up.railway.app/textcopy/copiedtext',
           { sheardurl: id }
         )
         console.log(res.data.data.text)
