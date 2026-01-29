@@ -8,7 +8,7 @@ export default function Home() {
   const [data, setData] = useState('')
 
 
-  const url = 'http://localhost:3000/textcopy/text'
+  const url = 'https://pastbin-backend-production.up.railway.app'
 
   const submitHandler = async (e: any) => {
     e.preventDefault()
@@ -21,12 +21,6 @@ export default function Home() {
     setData(res.data.url)
     console.log(data,'this is data in state')
   }
-
-  // const goLink = async (id: string) => {
-  //   console.log(id, 'this is id..')
-  //   const res = await axios.post(`http://localhost:3000/textcopy/copiedtext`, { sheardurl: id })
-  //   console.log(res.data, 'this is res..')
-  // }
 
 
   return (
