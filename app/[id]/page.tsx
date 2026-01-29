@@ -37,7 +37,7 @@ export default function CopiedTextPage() {
   if (loading) return <p className="min-h-screen flex items-center justify-center">Loading...</p>
   if (error) return <p className="min-h-screen flex items-center justify-center">{error}</p>
   return (
-    <div className="min-h-screen text-white flex flex-col ">
+    <div className="min-h-screen text-white flex flex-col">
       {/* //   <p className="text-xl"></p> */}
       <div className="text-white relative flex h-screen w-full flex-col items-start justify-start overflow-hidden">
         <BackgroundRippleEffect />
