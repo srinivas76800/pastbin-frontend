@@ -20,7 +20,7 @@ export default function Home() {
     if (!inputtext) return
     console.log(inputtext, 'this is input text')
     try {
-      const res = await axios.post(url, { text: inputtext })
+      const res = await axios.post(url, { text: inputtext },{ withCredentials: false })      
       console.log(res.data, 'this is from front end')
       setData(res.data.url)
       console.log(data, 'this is data in state')
